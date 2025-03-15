@@ -1,11 +1,11 @@
 {
   "name": "react-learn",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --base=/react-learn/",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "vite --host",
@@ -25,5 +25,6 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "vite": "^6.2.0"
-  }
+  },
+  "author": "PushEax <pusheax.vk@gmail.com>"
 }
