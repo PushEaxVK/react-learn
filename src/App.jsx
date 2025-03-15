@@ -1,41 +1,31 @@
-// import { useState } from 'react';
-// import reactLogo from './assets/react.svg';
-// import viteLogo from '/vite.svg';
-// import './App.css';
 import Header from './components/Header';
+import { ways } from './data';
+import WayToLorem from './components/WayToLorem';
+import Button from './components/Button';
 
 function App() {
-  // const [count, setCount] = useState(0);
-
   return (
     <>
-      {/*
-    //   <div>
-    //     <a href="https://vite.dev" target="_blank">
-    //       <img src={viteLogo} className="logo" alt="Vite logo" />
-    //     </a>
-    //     <a href="https://react.dev" target="_blank">
-    //       <img src={reactLogo} className="logo react" alt="React logo" />
-    //     </a>
-    //   </div>
-    //   <h1>Vite + React</h1>
-    //   <div className="card">
-    //     <button onClick={() => setCount((count) => count + 1)}>
-    //       count is {count}
-    //     </button>
-    //     <p>
-    //       Edit <code>src/App.jsx</code> and save to test HMR
-    //     </p>
-    //   </div>
-    //   <p className="read-the-docs">
-    //     Click on the Vite and React logos to learn more
-    //   </p>
-    // </>
-    <>
-    */}
       <Header />
       <main>
-        <h1>Hello React!</h1>
+        <section>
+          <h1>Hello React!</h1>
+          <h3>Lorem ipsum dolor sit amet.</h3>
+
+          <ul>
+            <WayToLorem
+              title={ways[0].title}
+              description={ways[0].description}
+            />
+            <WayToLorem {...ways[1]} />
+            <WayToLorem {...ways[2]} />
+            <WayToLorem {...ways[3]} />
+          </ul>
+        </section>
+        <section>
+          <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+          <Button />
+        </section>
       </main>
     </>
   );
