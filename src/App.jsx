@@ -2,10 +2,14 @@ import Header from './components/Header/Header';
 import { ways } from './data';
 import WayToLorem from './components/WayToLorem/WayToLorem';
 import Button from './components/Button/Button';
+import { useState } from 'react';
 
 function App() {
-  function clickHandler() {
-    console.log('Hello React!');
+  const [content, setContent] = useState('Press button!');
+
+  function clickHandler(type) {
+    console.log('button clicked', type);
+    setContent(`You clicked ${type}!`);
   }
 
   return (
@@ -28,7 +32,11 @@ function App() {
         </section>
         <section>
           <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-          <Button onClick={clickHandler}>Hello</Button>
+          <Button onClick={() => clickHandler('way')}>Way</Button>
+          <Button onClick={() => clickHandler('easy')}>Easy</Button>
+          <Button onClick={() => clickHandler('program')}>Program</Button>
+
+          <p>{content}</p>
         </section>
       </main>
     </>
