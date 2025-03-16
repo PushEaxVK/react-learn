@@ -1,6 +1,6 @@
-import Header from './components/Header';
+import Header from './components/Header/Header';
 import { ways } from './data';
-import WayToLorem from './components/WayToLorem';
+import WayToLorem from './components/WayToLorem/WayToLorem';
 import Button from './components/Button/Button';
 
 function App() {

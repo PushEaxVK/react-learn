@@ -1,9 +1,10 @@
-import Time from './Time';
+import Time from '../Time';
 import vite from '/vite.svg';
+import './Header.css';
 
 export default function Header() {
   return (
-    <header>
+    <header className="header">
       <img src={vite} alt="vite logo" />
       <h3>Welcome!</h3>
 
