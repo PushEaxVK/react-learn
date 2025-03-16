@@ -31,11 +31,22 @@ function App() {
         </section>
         <section>
           <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-          <Button onClick={() => clickHandler('way')} isActive>
+          <Button
+            isActive={contentType === 'way'}
+            onClick={() => clickHandler('way')}
+          >
             Way
           </Button>
-          <Button onClick={() => clickHandler('easy')}>Easy</Button>
-          <Button onClick={() => clickHandler('program')} isActive>
+          <Button
+            isActive={contentType === 'easy'}
+            onClick={() => clickHandler('easy')}
+          >
+            Easy
+          </Button>
+          <Button
+            isActive={contentType === 'program'}
+            onClick={() => clickHandler('program')}
+          >
             Program
           </Button>
 
