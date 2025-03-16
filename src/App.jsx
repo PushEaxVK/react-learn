@@ -1,9 +1,13 @@
 import Header from './components/Header';
 import { ways } from './data';
 import WayToLorem from './components/WayToLorem';
-import Button from './components/Button';
+import Button from './components/Button/Button';
 
 function App() {
+  function clickHandler() {
+    console.log('Hello React!');
+  }
+
   return (
     <>
       <Header />
@@ -24,7 +28,7 @@ function App() {
         </section>
         <section>
           <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-          <Button />
+          <Button onClick={clickHandler}>Hello</Button>
         </section>
       </main>
     </>
