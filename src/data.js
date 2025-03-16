@@ -19,6 +19,11 @@ export const ways = [
     description:
       'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
+  {
+    title: 'Lorem Ipsum 5',
+    description:
+      'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
 ];
 
 export const diff = {
