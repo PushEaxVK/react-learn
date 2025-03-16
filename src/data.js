@@ -20,3 +20,10 @@ export const ways = [
       'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
   },
 ];
+
+export const diff = {
+  way: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore, harum?',
+  easy: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ratione exercitationem sunt?',
+  program:
+    'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, ad nihil asperiores vel libero necessitatibus?',
+};

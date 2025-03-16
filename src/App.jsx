@@ -1,15 +1,14 @@
 import Header from './components/Header/Header';
-import { ways } from './data';
+import { ways, diff } from './data';
 import WayToLorem from './components/WayToLorem/WayToLorem';
 import Button from './components/Button/Button';
 import { useState } from 'react';
 
 function App() {
-  const [content, setContent] = useState('Press button!');
+  const [contentType, setContentType] = useState(null);
 
   function clickHandler(type) {
-    console.log('button clicked', type);
-    setContent(`You clicked ${type}!`);
+    setContentType(type);
   }
 
   return (
@@ -36,7 +35,7 @@ function App() {
           <Button onClick={() => clickHandler('easy')}>Easy</Button>
           <Button onClick={() => clickHandler('program')}>Program</Button>
 
-          <p>{content}</p>
+          <p>{contentType ? diff[contentType] : 'Press button!'}</p>
         </section>
       </main>
     </>
