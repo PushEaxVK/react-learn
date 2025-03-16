@@ -31,11 +31,18 @@ function App() {
         </section>
         <section>
           <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-          <Button onClick={() => clickHandler('way')}>Way</Button>
+          <Button onClick={() => clickHandler('way')} isActive>
+            Way
+          </Button>
           <Button onClick={() => clickHandler('easy')}>Easy</Button>
-          <Button onClick={() => clickHandler('program')}>Program</Button>
+          <Button onClick={() => clickHandler('program')} isActive>
+            Program
+          </Button>
 
-          <p>{contentType ? diff[contentType] : 'Press button!'}</p>
+          {/* <p>{contentType ? diff[contentType] : 'Press button!'}</p> */}
+
+          {contentType && <p>{diff[contentType]}</p>}
+          {!contentType && <p>Press button!</p>}
         </section>
       </main>
     </>
