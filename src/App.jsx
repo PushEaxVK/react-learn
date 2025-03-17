@@ -1,8 +1,9 @@
 import Header from './components/Header/Header';
-import { ways, diff } from './data';
+import { ways, diff, favBooks } from './data';
 import WayToLorem from './components/WayToLorem/WayToLorem';
 import Button from './components/Button/Button';
 import { useState } from 'react';
+import BookList from './components/BookList';
 
 function App() {
   const [contentType, setContentType] = useState(null);
@@ -50,6 +51,10 @@ function App() {
 
           {contentType && <p>{diff[contentType]}</p>}
           {!contentType && <p>Press button!</p>}
+        </section>
+        <section>
+          <h1>Books of the week</h1>
+          <BookList books={favBooks} />
         </section>
       </main>
     </>

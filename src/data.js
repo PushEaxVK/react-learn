@@ -32,3 +32,9 @@ export const diff = {
   program:
     'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste, ad nihil asperiores vel libero necessitatibus?',
 };
+
+export const favBooks = [
+  { id: 'id-1', name: 'JS for beginners' },
+  { id: 'id-2', name: 'React basics' },
+  { id: 'id-3', name: 'React Router overview' },
+];
