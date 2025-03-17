@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/react-learn/",
+    "build-github": "vite build --base=/react-learn/",
+    "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "vite --host",
