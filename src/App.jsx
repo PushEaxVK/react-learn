@@ -21,7 +21,7 @@ function App() {
 
           <ul>
             {ways.map(way => (
-              <WayToLorem {...way} />
+              <WayToLorem key={way.title} {...way} />
             ))}
             {/* <WayToLorem
               title={ways[0].title}
