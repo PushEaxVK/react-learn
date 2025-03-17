@@ -23,13 +23,6 @@ function App() {
             {ways.map(way => (
               <WayToLorem key={way.title} {...way} />
             ))}
-            {/* <WayToLorem
-              title={ways[0].title}
-              description={ways[0].description}
-            />
-            <WayToLorem {...ways[1]} />
-            <WayToLorem {...ways[2]} />
-            <WayToLorem {...ways[3]} /> */}
           </ul>
         </section>
         <section>
