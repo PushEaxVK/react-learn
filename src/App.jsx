@@ -1,9 +1,9 @@
-import Header from './components/Header/Header';
 import { ways, diff, favBooks } from './data';
 import WayToLorem from './components/WayToLorem/WayToLorem';
 import Button from './components/Button/Button';
 import { useState } from 'react';
 import BookList from './components/BookList';
+import Header from './components/Header/Header';
 
 function App() {
   const [contentType, setContentType] = useState(null);
@@ -60,5 +60,7 @@ function App() {
     </>
   );
 }
+
+// TODO: Do something
 
 export default App;
