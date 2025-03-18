@@ -1,8 +1,8 @@
 import clsx from 'clsx';
-import './Button.css';
+import css from './Button.module.css';
 
 export default function Button({ children, onClick, isActive = false }) {
-  const className = clsx('button', isActive && 'active');
+  const className = clsx(css.button, isActive && css.active);
   return (
     <button className={className} onClick={onClick}>
       {children}
