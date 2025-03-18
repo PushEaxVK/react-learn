@@ -1,8 +1,10 @@
+import clsx from 'clsx';
 import './Button.css';
 
 export default function Button({ children, onClick, isActive = false }) {
+  const className = clsx('button', isActive && 'active');
   return (
-    <button className={isActive ? 'button active' : 'button'} onClick={onClick}>
+    <button className={className} onClick={onClick}>
       {children}
     </button>
   );
