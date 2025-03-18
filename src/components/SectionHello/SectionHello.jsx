@@ -7,6 +7,7 @@ function SectionHello() {
       <h1>Hello React!</h1>
       <h3>Lorem ipsum dolor sit amet.</h3>
       <p>Some changes!</p>
+      <p>New changes!</p>
 
       <ul>
         {ways.map(way => (
