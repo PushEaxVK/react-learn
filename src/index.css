@@ -10,6 +10,7 @@
 
 body {
   font-family: Roboto, sans-serif;
+  line-height: 1.5;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 1rem;
@@ -17,6 +18,27 @@ body {
 
 ul {
   list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 /* :root {
