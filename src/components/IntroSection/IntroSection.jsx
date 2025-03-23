@@ -2,7 +2,7 @@ import React from 'react';
 import css from './IntroSection.module.css';
 
 function IntroSection() {
-  return React.createElement('section', null, [
+  return React.createElement('section', { style: { marginBottom: '1rem' } }, [
     React.createElement(
       'h1',
       { className: css.centered, key: 1 },
