@@ -3,21 +3,26 @@ import './FeedbackSection.css';
 import { useState } from 'react';
 
 const FeedbackSection = () => {
-  const [name, setName] = useState('');
-  const [reason, setReason] = useState('help');
-  const [hasError, setHasError] = useState(false);
+  const [form, setForm] = useState({
+    name: '',
+    reason: 'help',
+    hasError: false,
+  });
 
   const handleNameChange = event => {
-    setName(event.target.value);
-    setHasError(event.target.value.length === 0);
+    setForm(prev => ({
+      ...prev,
+      name: event.target.value,
+      hasError: event.target.value.length === 0,
+    }));
   };
 
   const handleReasonCHange = event => {
-    setReason(event.target.value);
+    setForm(prev => ({ ...prev, reason: event.target.value }));
   };
 
   function toggleError() {
-    setHasError(prev => !prev);
+    setForm(prev => ({ ...prev, hasError: !prev.hasError }));
   }
 
   return (
@@ -35,11 +40,11 @@ const FeedbackSection = () => {
           type="text"
           name="name"
           id="name"
-          value={name}
+          value={form.name}
           onChange={handleNameChange}
           autoComplete="off"
           style={{
-            border: hasError ? '1px solid red' : null,
+            border: form.hasError ? '1px solid red' : null,
           }}
         />
 
@@ -47,7 +52,7 @@ const FeedbackSection = () => {
         <select
           id="reason"
           className="control"
-          value={reason}
+          value={form.reason}
           onChange={handleReasonCHange}
         >
           <option value="error">Error</option>
@@ -55,13 +60,9 @@ const FeedbackSection = () => {
           <option value="suggest">Suggest</option>
         </select>
 
-        <pre>
-          Name: {name}
-          <br />
-          Reason: {reason}
-        </pre>
+        <pre>{JSON.stringify(form, null, 2)}</pre>
 
-        <Button disabled={hasError} isActive={!hasError}>
+        <Button disabled={form.hasError} isActive={!form.hasError}>
           Send
         </Button>
       </form>
