@@ -1,15 +1,27 @@
+import React from 'react';
 import css from './IntroSection.module.css';
 
-const IntroSection = () => {
-  return (
-    <section>
-      <h1 className={css.centered}>Lorem, ipsum.</h1>
-      <h3 className={css.centered} style={{ color: '#666' }}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
-        illum.
-      </h3>
-    </section>
-  );
-};
+function IntroSection() {
+  return React.createElement('section', null, [
+    React.createElement('h1', { className: css.centered }, 'Lorem, ipsum.'),
+    React.createElement(
+      'h3',
+      { className: css.centered, style: { color: '#666' } },
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, illum.'
+    ),
+  ]);
+}
+
+// const IntroSection = () => {
+//   return (
+//     <section>
+//       <h1 className={css.centered}>Lorem, ipsum.</h1>
+//       <h3 className={css.centered} style={{ color: '#666' }}>
+//         Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat,
+//         illum.
+//       </h3>
+//     </section>
+//   );
+// };
 
 export default IntroSection;
