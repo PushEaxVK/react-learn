@@ -6,6 +6,7 @@ import IntroSection from './components/IntroSection/IntroSection';
 import TabPagesSection from './components/TabPagesSection/TabPagesSection';
 import FeedbackSection from './components/FeedbackSection/FeedbackSection';
 import { useState } from 'react';
+import EffectsSection from './components/EffectsSection/EffectsSection';
 
 function App() {
   const [tab, setTab] = useState('feedback');
@@ -26,6 +27,8 @@ function App() {
         )}
 
         {tab === 'feedback' && <FeedbackSection />}
+
+        {tab === 'effect' && <EffectsSection />}
       </main>
     </>
   );

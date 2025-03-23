@@ -12,6 +12,9 @@ const TabPagesSection = ({ value, callback }) => {
       >
         Feedback
       </Button>
+      <Button isActive={value === 'effect'} onClick={() => callback('effect')}>
+        Effects
+      </Button>
     </section>
   );
 };
