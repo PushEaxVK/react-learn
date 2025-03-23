@@ -1,6 +1,29 @@
 import Button from '../Button/Button';
 import './FeedbackSection.css';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+
+function StateVsRef() {
+  const input = useRef();
+  const [show, setShow] = useState(false);
+
+  function handleKeydown(event) {
+    if (event.key === 'Enter') {
+      setShow(true);
+    }
+  }
+
+  return (
+    <div>
+      <h3>Input value: {show && input.current.value}</h3>
+      <input
+        ref={input}
+        type="text"
+        className="control"
+        onKeyDown={handleKeydown}
+      />
+    </div>
+  );
+}
 
 const FeedbackSection = () => {
   const [form, setForm] = useState({
@@ -33,7 +56,7 @@ const FeedbackSection = () => {
         Toggle Error
       </Button>
 
-      <form>
+      <form style={{ marginBottom: '1rem' }}>
         <label htmlFor="name">Your name</label>
         <input
           className="control"
@@ -66,6 +89,9 @@ const FeedbackSection = () => {
           Send
         </Button>
       </form>
+      <hr />
+
+      <StateVsRef />
     </section>
   );
 };
