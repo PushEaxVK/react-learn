@@ -1,4 +1,3 @@
-import css from './TabPagesSection.module.css';
 import Button from '../Button/Button';
 
 const TabPagesSection = ({ value, callback }) => {
