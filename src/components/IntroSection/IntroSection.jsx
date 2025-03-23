@@ -3,10 +3,14 @@ import css from './IntroSection.module.css';
 
 function IntroSection() {
   return React.createElement('section', null, [
-    React.createElement('h1', { className: css.centered }, 'Lorem, ipsum.'),
+    React.createElement(
+      'h1',
+      { className: css.centered, key: 1 },
+      'Lorem, ipsum.'
+    ),
     React.createElement(
       'h3',
-      { className: css.centered, style: { color: '#666' } },
+      { className: css.centered, style: { color: '#666' }, key: 2 },
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, illum.'
     ),
   ]);
