@@ -16,9 +16,17 @@ const FeedbackSection = () => {
     setReason(event.target.value);
   };
 
+  function toggleError() {
+    setHasError(prev => !prev);
+  }
+
   return (
     <section>
       <h3>Feedback</h3>
+
+      <Button onClick={toggleError} isActive>
+        Toggle Error
+      </Button>
 
       <form>
         <label htmlFor="name">Your name</label>
