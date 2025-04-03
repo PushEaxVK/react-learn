@@ -7,28 +7,36 @@ import TabPagesSection from './components/TabPagesSection/TabPagesSection';
 import FeedbackSection from './components/FeedbackSection/FeedbackSection';
 import { useState } from 'react';
 import EffectsSection from './components/EffectsSection/EffectsSection';
+import GridSection from './components/GridSection/GridSection';
 
 function App() {
-  const [tab, setTab] = useState('feedback');
+  const [tab, setTab] = useState('Feedback');
+
+  const tabs = {
+    Main: (
+      <>
+        <SectionHello />
+        <SectionTabs />
+        <SectionBooks />
+      </>
+    ),
+    Feedback: <FeedbackSection />,
+    Effect: <EffectsSection />,
+    Grids: <GridSection />,
+  };
 
   return (
     <>
       <Header />
       <main>
         <IntroSection />
-        <TabPagesSection value={tab} callback={setTab} />
+        <TabPagesSection
+          value={tab}
+          callback={setTab}
+          keys={Object.keys(tabs)}
+        />
 
-        {tab === 'main' && (
-          <>
-            <SectionHello />
-            <SectionTabs />
-            <SectionBooks />
-          </>
-        )}
-
-        {tab === 'feedback' && <FeedbackSection />}
-
-        {tab === 'effect' && <EffectsSection />}
+        {tabs[tab]}
       </main>
     </>
   );
